@@ -26,7 +26,7 @@ object FrmModeloCadastro: TFrmModeloCadastro
     BevelEdges = []
     BevelOuter = bvNone
     Caption = '   Cadastro'
-    Color = 12480016
+    Color = 2913583
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -24

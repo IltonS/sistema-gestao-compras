@@ -15,6 +15,7 @@ type
     SQLiteDriver: TFDPhysSQLiteDriverLink;
     SQLiteConnection: TFDConnection;
     TableProdutos: TFDTable;
+    TableFornecedores: TFDTable;
   private
     { Private declarations }
   public

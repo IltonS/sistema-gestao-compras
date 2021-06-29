@@ -30,4 +30,13 @@ object DM: TDM
     Left = 40
     Top = 104
   end
+  object TableFornecedores: TFDTable
+    Active = True
+    IndexFieldNames = 'id_fornecedor'
+    Connection = SQLiteConnection
+    UpdateOptions.UpdateTableName = 'tb_fornecedores'
+    TableName = 'tb_fornecedores'
+    Left = 128
+    Top = 104
+  end
 end
