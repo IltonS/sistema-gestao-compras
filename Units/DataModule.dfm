@@ -4,13 +4,17 @@ object DM: TDM
   Width = 527
   object SQLiteDriver: TFDPhysSQLiteDriverLink
     DriverID = 'SQLite'
-    VendorLib = 'C:\sqlite3.dll'
+    VendorLib = 
+      'C:\Users\Ilton\Documents\Embarcadero\Studio\Projects\sistema-ges' +
+      'tao-compras\Lib\sqlite3.dll'
     Left = 24
     Top = 16
   end
   object SQLiteConnection: TFDConnection
     Params.Strings = (
-      'Database=C:\db_sgc.db'
+      
+        'Database=C:\Users\Ilton\Documents\Embarcadero\Studio\Projects\si' +
+        'stema-gestao-compras\Database\db_sgc.db'
       'LockingMode=Normal'
       'DriverID=SQLite')
     Connected = True

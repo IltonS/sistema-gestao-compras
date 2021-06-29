@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   Main in 'Units\Main.pas' {FrmMain},
   DataModule in 'Units\DataModule.pas' {DM: TDataModule},
-  ModeloCadastro in 'Units\ModeloCadastro.pas' {FrmModeloCadastro};
+  ModeloCadastro in 'Units\ModeloCadastro.pas' {FrmModeloCadastro},
+  Produtos in 'Units\Produtos.pas' {FrmProdutos};
 
 {$R *.res}
 
@@ -15,5 +16,6 @@ begin
   Application.CreateForm(TFrmMain, FrmMain);
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrmModeloCadastro, FrmModeloCadastro);
+  Application.CreateForm(TFrmProdutos, FrmProdutos);
   Application.Run;
 end.
