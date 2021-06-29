@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, System.Actions, Vcl.ActnList,
-  Vcl.ActnMan, Vcl.StdStyleActnCtrls, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.AppEvnts;
+  Vcl.ActnMan, Vcl.StdStyleActnCtrls, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.AppEvnts,
+  ShellAPI;
 
 type
   TFrmMain = class(TForm)
@@ -27,6 +28,11 @@ type
     StatusBar: TStatusBar;
     Timer: TTimer;
     ApplicationEvents: TApplicationEvents;
+    CalculadoraCmd: TAction;
+    NavegadorCmd: TAction;
+    Utilitrios1: TMenuItem;
+    Calculadora1: TMenuItem;
+    Navegador1: TMenuItem;
     procedure Sair(Sender: TObject);
     procedure Produtos(Sender: TObject);
     procedure Fornecedores(Sender: TObject);
@@ -35,6 +41,8 @@ type
     procedure FormActivate(Sender: TObject);
     procedure TimerTimer(Sender: TObject);
     procedure ApplicationEventsHint(Sender: TObject);
+    procedure Calculadora(Sender: TObject);
+    procedure Navegador(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +60,11 @@ procedure TFrmMain.ApplicationEventsHint(Sender: TObject);
 begin
   //Exibe a ajuda da ação
   StatusBar.Panels[2].Text := Application.Hint;
+end;
+
+procedure TFrmMain.Calculadora(Sender: TObject);
+begin
+  ShellExecute(0, nil,'calc', PChar(''), '', SW_NORMAL);
 end;
 
 procedure TFrmMain.Cargos(Sender: TObject);
@@ -74,6 +87,11 @@ end;
 procedure TFrmMain.Funcionarios(Sender: TObject);
 begin
   //To-do
+end;
+
+procedure TFrmMain.Navegador(Sender: TObject);
+begin
+  ShellExecute(Handle, 'Open', PChar('https://google.com'), '', '', SW_NORMAL);
 end;
 
 procedure TFrmMain.Produtos(Sender: TObject);

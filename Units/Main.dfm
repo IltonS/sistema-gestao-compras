@@ -74,6 +74,20 @@ object FrmMain: TFrmMain
       Hint = 'Sair|Encerra a aplica'#231#227'o.'
       OnExecute = Sair
     end
+    object CalculadoraCmd: TAction
+      Category = 'utilitarios'
+      Caption = '&Calculadora'
+      Hint = 'Calculadora|Abre a calculadora do sistema.'
+      ShortCut = 8259
+      OnExecute = Calculadora
+    end
+    object NavegadorCmd: TAction
+      Category = 'utilitarios'
+      Caption = '&Navegador'
+      Hint = 'Navegador|Abre o navegador padr'#227'o do Windows.'
+      ShortCut = 8270
+      OnExecute = Navegador
+    end
   end
   object MainMenu: TMainMenu
     Left = 112
@@ -100,6 +114,15 @@ object FrmMain: TFrmMain
       end
       object Sair1: TMenuItem
         Action = SairCmd
+      end
+    end
+    object Utilitrios1: TMenuItem
+      Caption = '&Utilit'#225'rios'
+      object Calculadora1: TMenuItem
+        Action = CalculadoraCmd
+      end
+      object Navegador1: TMenuItem
+        Action = NavegadorCmd
       end
     end
   end
