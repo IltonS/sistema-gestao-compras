@@ -4,13 +4,13 @@ object DM: TDM
   Width = 527
   object SQLiteDriver: TFDPhysSQLiteDriverLink
     DriverID = 'SQLite'
-    VendorLib = '.\Lib\sqlite3.dll'
+    VendorLib = 'C:\sqlite3.dll'
     Left = 24
     Top = 16
   end
   object SQLiteConnection: TFDConnection
     Params.Strings = (
-      'Database=.\Database\db_sgc.db'
+      'Database=C:\db_sgc.db'
       'LockingMode=Normal'
       'DriverID=SQLite')
     Connected = True
@@ -18,6 +18,8 @@ object DM: TDM
     Top = 16
   end
   object TableProdutos: TFDTable
+    Active = True
+    IndexFieldNames = 'id_produto'
     Connection = SQLiteConnection
     UpdateOptions.UpdateTableName = 'tb_produtos'
     TableName = 'tb_produtos'
