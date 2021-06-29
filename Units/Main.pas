@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, System.Actions, Vcl.ActnList,
-  Vcl.ActnMan, Vcl.StdStyleActnCtrls;
+  Vcl.ActnMan, Vcl.StdStyleActnCtrls, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.AppEvnts;
 
 type
   TFrmMain = class(TForm)
@@ -24,11 +24,17 @@ type
     Funcionrios1: TMenuItem;
     N1: TMenuItem;
     Sair1: TMenuItem;
+    StatusBar: TStatusBar;
+    Timer: TTimer;
+    ApplicationEvents: TApplicationEvents;
     procedure Sair(Sender: TObject);
     procedure Produtos(Sender: TObject);
     procedure Fornecedores(Sender: TObject);
     procedure Cargos(Sender: TObject);
     procedure Funcionarios(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure TimerTimer(Sender: TObject);
+    procedure ApplicationEventsHint(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,9 +48,22 @@ implementation
 
 {$R *.dfm}
 
+procedure TFrmMain.ApplicationEventsHint(Sender: TObject);
+begin
+  //Exibe a ajuda da ação
+  StatusBar.Panels[2].Text := Application.Hint;
+end;
+
 procedure TFrmMain.Cargos(Sender: TObject);
 begin
   //To-do
+end;
+
+procedure TFrmMain.FormActivate(Sender: TObject);
+begin
+  //Atualiza a data do sistema
+  StatusBar.Panels[0].Text := FormatDateTime('hh:nn:ss', Now);
+  StatusBar.Panels[1].Text := FormatDateTime('dddd", "dd" de "mmmm" de "yyyy', Now);
 end;
 
 procedure TFrmMain.Fornecedores(Sender: TObject);
@@ -65,6 +84,13 @@ end;
 procedure TFrmMain.Sair(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TFrmMain.TimerTimer(Sender: TObject);
+begin
+  //Atualiza a data do sistema
+  StatusBar.Panels[0].Text := FormatDateTime('hh:nn:ss', Now);
+  StatusBar.Panels[1].Text := FormatDateTime('dddd", "dd" de "mmmm" de "yyyy', Now);
 end;
 
 end.

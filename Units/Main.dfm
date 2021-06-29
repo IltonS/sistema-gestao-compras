@@ -14,11 +14,31 @@ object FrmMain: TFrmMain
   OldCreateOrder = False
   Position = poScreenCenter
   WindowState = wsMaximized
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
+  object StatusBar: TStatusBar
+    Left = 0
+    Top = 374
+    Width = 1012
+    Height = 19
+    Panels = <
+      item
+        Width = 60
+      end
+      item
+        Width = 260
+      end
+      item
+        Width = 260
+      end>
+    ExplicitLeft = 512
+    ExplicitTop = 216
+    ExplicitWidth = 0
+  end
   object ActionManager: TActionManager
     Left = 32
-    Top = 136
+    Top = 16
     StyleName = 'Standard'
     object ProdutosCmd: TAction
       Category = 'cadastros'
@@ -56,8 +76,8 @@ object FrmMain: TFrmMain
     end
   end
   object MainMenu: TMainMenu
-    Left = 32
-    Top = 192
+    Left = 112
+    Top = 16
     object Sistema1: TMenuItem
       Caption = '&Sistema'
       object Cadastros1: TMenuItem
@@ -82,5 +102,15 @@ object FrmMain: TFrmMain
         Action = SairCmd
       end
     end
+  end
+  object Timer: TTimer
+    OnTimer = TimerTimer
+    Left = 184
+    Top = 16
+  end
+  object ApplicationEvents: TApplicationEvents
+    OnHint = ApplicationEventsHint
+    Left = 264
+    Top = 16
   end
 end
