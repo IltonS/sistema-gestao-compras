@@ -17,6 +17,7 @@ type
     TableProdutos: TFDTable;
     TableFornecedores: TFDTable;
     TableCargos: TFDTable;
+    TableFuncionarios: TFDTable;
   private
     { Private declarations }
   public

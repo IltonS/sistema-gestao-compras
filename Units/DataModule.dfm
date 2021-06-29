@@ -48,4 +48,13 @@ object DM: TDM
     Left = 216
     Top = 104
   end
+  object TableFuncionarios: TFDTable
+    Active = True
+    IndexFieldNames = 'id_funcionario'
+    Connection = SQLiteConnection
+    UpdateOptions.UpdateTableName = 'tb_funcionarios'
+    TableName = 'tb_funcionarios'
+    Left = 304
+    Top = 104
+  end
 end

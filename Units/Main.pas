@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, System.Actions, Vcl.ActnList,
   Vcl.ActnMan, Vcl.StdStyleActnCtrls, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.AppEvnts,
-  ShellAPI, Produtos, Fornecedores, Cargos;
+  ShellAPI, Produtos, Fornecedores, Cargos, Funcionarios;
 
 type
   TFrmMain = class(TForm)
@@ -86,7 +86,7 @@ end;
 
 procedure TFrmMain.Funcionarios(Sender: TObject);
 begin
-  //To-do
+  FrmFuncionarios.ShowModal;
 end;
 
 procedure TFrmMain.Navegador(Sender: TObject);

@@ -7,7 +7,8 @@ uses
   ModeloCadastro in 'Units\ModeloCadastro.pas' {FrmModeloCadastro},
   Produtos in 'Units\Produtos.pas' {FrmProdutos},
   Fornecedores in 'Units\Fornecedores.pas' {FrmFornecedores},
-  Cargos in 'Units\Cargos.pas' {FrmCargos};
+  Cargos in 'Units\Cargos.pas' {FrmCargos},
+  Funcionarios in 'Funcionarios.pas' {FrmFuncionarios};
 
 {$R *.res}
 
@@ -21,5 +22,6 @@ begin
   Application.CreateForm(TFrmProdutos, FrmProdutos);
   Application.CreateForm(TFrmFornecedores, FrmFornecedores);
   Application.CreateForm(TFrmCargos, FrmCargos);
+  Application.CreateForm(TFrmFuncionarios, FrmFuncionarios);
   Application.Run;
 end.
