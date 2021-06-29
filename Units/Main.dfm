@@ -2,8 +2,8 @@ object FrmMain: TFrmMain
   Left = 0
   Top = 0
   Caption = 'Sistema para Gest'#227'o de Compras'
-  ClientHeight = 418
-  ClientWidth = 722
+  ClientHeight = 393
+  ClientWidth = 1012
   Color = clAppWorkSpace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
