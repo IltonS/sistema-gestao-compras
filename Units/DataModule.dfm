@@ -39,4 +39,13 @@ object DM: TDM
     Left = 128
     Top = 104
   end
+  object TableCargos: TFDTable
+    Active = True
+    IndexFieldNames = 'id_cargo'
+    Connection = SQLiteConnection
+    UpdateOptions.UpdateTableName = 'tb_cargos'
+    TableName = 'tb_cargos'
+    Left = 216
+    Top = 104
+  end
 end

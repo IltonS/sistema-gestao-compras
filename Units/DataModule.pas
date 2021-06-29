@@ -16,6 +16,7 @@ type
     SQLiteConnection: TFDConnection;
     TableProdutos: TFDTable;
     TableFornecedores: TFDTable;
+    TableCargos: TFDTable;
   private
     { Private declarations }
   public

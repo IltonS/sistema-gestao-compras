@@ -6,7 +6,8 @@ uses
   DataModule in 'Units\DataModule.pas' {DM: TDataModule},
   ModeloCadastro in 'Units\ModeloCadastro.pas' {FrmModeloCadastro},
   Produtos in 'Units\Produtos.pas' {FrmProdutos},
-  Fornecedores in 'Units\Fornecedores.pas' {FrmFornecedores};
+  Fornecedores in 'Units\Fornecedores.pas' {FrmFornecedores},
+  Cargos in 'Units\Cargos.pas' {FrmCargos};
 
 {$R *.res}
 
@@ -19,5 +20,6 @@ begin
   Application.CreateForm(TFrmModeloCadastro, FrmModeloCadastro);
   Application.CreateForm(TFrmProdutos, FrmProdutos);
   Application.CreateForm(TFrmFornecedores, FrmFornecedores);
+  Application.CreateForm(TFrmCargos, FrmCargos);
   Application.Run;
 end.
