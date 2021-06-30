@@ -32,14 +32,25 @@ object FrmMain: TFrmMain
       item
         Width = 260
       end>
-    ExplicitLeft = 512
-    ExplicitTop = 216
-    ExplicitWidth = 0
   end
   object ActionManager: TActionManager
     Left = 32
     Top = 16
     StyleName = 'Standard'
+    object ComprasCmd: TAction
+      Category = 'cadastros'
+      Caption = '&Compras'
+      Hint = 'Compras|Cadastro de compras no sistema.'
+      ShortCut = 32835
+      OnExecute = Compras
+    end
+    object CotacoesCmd: TAction
+      Category = 'cadastros'
+      Caption = 'C&ota'#231#245'es'
+      Hint = 'Cota'#231#245'es|Cadastro de cota'#231#245'es de compras.'
+      ShortCut = 32847
+      OnExecute = Cotacoes
+    end
     object ProdutosCmd: TAction
       Category = 'cadastros'
       Caption = '&Produtos'
@@ -56,7 +67,7 @@ object FrmMain: TFrmMain
     end
     object CargosCmd: TAction
       Category = 'cadastros'
-      Caption = '&Cargos'
+      Caption = 'C&argos'
       Hint = 'Cargos|Manuten'#231#227'o do cadastro de cargos do sistema.'
       ShortCut = 49219
       OnExecute = Cargos
@@ -96,6 +107,15 @@ object FrmMain: TFrmMain
       Caption = '&Sistema'
       object Cadastros1: TMenuItem
         Caption = 'C&adastros'
+        object Compras1: TMenuItem
+          Action = ComprasCmd
+        end
+        object Cotaes1: TMenuItem
+          Action = CotacoesCmd
+        end
+        object N2: TMenuItem
+          Caption = '-'
+        end
         object Produtos1: TMenuItem
           Action = ProdutosCmd
         end

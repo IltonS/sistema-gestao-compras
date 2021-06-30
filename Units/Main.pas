@@ -33,6 +33,11 @@ type
     Utilitrios1: TMenuItem;
     Calculadora1: TMenuItem;
     Navegador1: TMenuItem;
+    CotacoesCmd: TAction;
+    ComprasCmd: TAction;
+    Compras1: TMenuItem;
+    Cotaes1: TMenuItem;
+    N2: TMenuItem;
     procedure Sair(Sender: TObject);
     procedure Produtos(Sender: TObject);
     procedure Fornecedores(Sender: TObject);
@@ -43,6 +48,8 @@ type
     procedure ApplicationEventsHint(Sender: TObject);
     procedure Calculadora(Sender: TObject);
     procedure Navegador(Sender: TObject);
+    procedure Compras(Sender: TObject);
+    procedure Cotacoes(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,6 +77,16 @@ end;
 procedure TFrmMain.Cargos(Sender: TObject);
 begin
   FrmCargos.ShowModal;
+end;
+
+procedure TFrmMain.Compras(Sender: TObject);
+begin
+  //To-do
+end;
+
+procedure TFrmMain.Cotacoes(Sender: TObject);
+begin
+  //To-do
 end;
 
 procedure TFrmMain.FormActivate(Sender: TObject);
