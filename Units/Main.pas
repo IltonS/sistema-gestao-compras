@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, System.Actions, Vcl.ActnList,
   Vcl.ActnMan, Vcl.StdStyleActnCtrls, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.AppEvnts,
-  ShellAPI, Produtos, Fornecedores, Cargos, Funcionarios;
+  ShellAPI, Produtos, Fornecedores, Cargos, Funcionarios, Cotacoes;
 
 type
   TFrmMain = class(TForm)
@@ -86,7 +86,7 @@ end;
 
 procedure TFrmMain.Cotacoes(Sender: TObject);
 begin
-  //To-do
+  FrmCotacoes.ShowModal;
 end;
 
 procedure TFrmMain.FormActivate(Sender: TObject);

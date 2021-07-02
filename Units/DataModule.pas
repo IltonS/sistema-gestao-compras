@@ -18,6 +18,8 @@ type
     TableFornecedores: TFDTable;
     TableCargos: TFDTable;
     TableFuncionarios: TFDTable;
+    TableCotacoes: TFDTable;
+    QueryProdutos: TFDQuery;
   private
     { Private declarations }
   public

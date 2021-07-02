@@ -57,4 +57,21 @@ object DM: TDM
     Left = 304
     Top = 104
   end
+  object TableCotacoes: TFDTable
+    Active = True
+    IndexFieldNames = 'id_cotacao'
+    Connection = SQLiteConnection
+    UpdateOptions.UpdateTableName = 'tb_cotacoes'
+    TableName = 'tb_cotacoes'
+    Left = 392
+    Top = 104
+  end
+  object QueryProdutos: TFDQuery
+    Active = True
+    Connection = SQLiteConnection
+    SQL.Strings = (
+      'SELECT * FROM tb_produtos')
+    Left = 40
+    Top = 200
+  end
 end

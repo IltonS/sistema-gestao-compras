@@ -8,7 +8,8 @@ uses
   Produtos in 'Units\Produtos.pas' {FrmProdutos},
   Fornecedores in 'Units\Fornecedores.pas' {FrmFornecedores},
   Cargos in 'Units\Cargos.pas' {FrmCargos},
-  Funcionarios in 'Funcionarios.pas' {FrmFuncionarios};
+  Funcionarios in 'Funcionarios.pas' {FrmFuncionarios},
+  Cotacoes in 'Units\Cotacoes.pas' {FrmCotacoes};
 
 {$R *.res}
 
@@ -23,5 +24,6 @@ begin
   Application.CreateForm(TFrmFornecedores, FrmFornecedores);
   Application.CreateForm(TFrmCargos, FrmCargos);
   Application.CreateForm(TFrmFuncionarios, FrmFuncionarios);
+  Application.CreateForm(TFrmCotacoes, FrmCotacoes);
   Application.Run;
 end.
